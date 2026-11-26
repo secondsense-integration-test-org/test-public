@@ -1,0 +1,12 @@
+name: Deploy
+on:
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: staging
+      url: https://staging.example.invalid
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "Deploying ${GITHUB_SHA} to staging (test only)"
