@@ -11,6 +11,9 @@ class DivideTest(unittest.TestCase):
     def test_divide(self) -> None:
         self.assertEqual(divide(6, 3), 2)
 
+    def test_divide_negative(self) -> None:
+        self.assertEqual(divide(-6, 3), -2)
+
     def test_divide_by_zero(self) -> None:
         with self.assertRaises(ValueError):
             divide(1, 0)
